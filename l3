@@ -1,1 +1,47 @@
-jujkukiyliylil
+import java.util.Scanner;
+
+public class Work1 {
+	public void f2() {
+		int counter=1;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("enter word: "); 
+		String word=scan.next();
+		while(!word.equals("enter")) {
+			counter=counter+1;
+			System.out.print("enter word again: ");
+			word=scan.next();
+		}
+		System.out.print(counter);
+		
+	}
+	
+	public void f3(int num1) {
+		Scanner scan = new Scanner(System.in);
+		int count=2;
+		int try1;
+		System.out.print("enter code: "); 
+		try1= scan.nextInt();
+		while((count != 0) && (try1!= num1)) {
+			System.out.print("tries left "+count+" ,try again: ");
+			try1=scan.nextInt();
+			count=count-1;
+		}
+		if (try1==num1) 
+			System.out.println("How much money");
+		else
+			System.out.println("Error");
+
+	}
+	
+	public void f4(String str) {
+		boolean bool = true;
+		int len=(str.length())-1;
+		int R=str.length()/2;
+		for (int i=0;i<R;i++) {
+			if((str.charAt(i))!=(str.charAt(len)))
+				bool=false;
+			len=len-1;
+		}
+		System.out.println(bool);
+	}
+	}
